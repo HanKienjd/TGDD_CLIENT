@@ -17,7 +17,6 @@ import Trend from "./TrendShopping";
 function HomePage(props) {
   const dispatch = useDispatch();
   const { dataHomePage } = useSelector((state) => state.page);
-  console.log("🚀 ~ file: HomePage.jsx ~ line 20 ~ HomePage ~ dataHomePage", dataHomePage)
   let finalIndexDataHomePage = dataHomePage.length - 1;
   useEffect(() => {
     dispatch({

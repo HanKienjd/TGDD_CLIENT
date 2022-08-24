@@ -4,6 +4,7 @@ import { memo, useState } from "react";
 function Info(props) {
   const [gender, setGender] = useState("");
   const { setFieldValue, errors, handleChange, touched } = props;
+	console.log("touched", touched);
   return (
     <div className="py-4 ">
       <h1 className="text-center font-semibold text-base">

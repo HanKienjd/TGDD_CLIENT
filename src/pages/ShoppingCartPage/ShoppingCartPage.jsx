@@ -64,6 +64,10 @@ function ShoppingCartPage(props) {
       },
     });
 
+	useEffect(() => {
+		console.log("user", user);
+	},[]);
+
   return (
     <div className="flex bg-[#eee] items-center justify-center p-4">
       {!loadingShoppingCart ? (

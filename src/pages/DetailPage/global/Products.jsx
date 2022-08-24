@@ -4,7 +4,6 @@ import PaginateCT from "../../../components/Pagination/PaginateCT";
 import SkeletonCard from "../../../components/Skeleton/SkeletonCard";
 function Products(props) {
   const { data, totalQuantity, type, category, queryParam } = props;
-  console.log("props" , props);
   const { loading } = useSelector((state) => state.global);
   const renderProduct = () => {
     // Loading
