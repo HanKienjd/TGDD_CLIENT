@@ -322,7 +322,7 @@ function ContentRight(props) {
             if (isLogin) {
               dispatch({
                 type: OPEN_MODAL_HOC,
-                title: "Thêm vào giõ hàng",
+                title: "Thêm vào giỏ hàng",
                 ComponentContentModal: (
                   <Cart user={user} productDetail={productDetail} />
                 ),
@@ -342,7 +342,7 @@ function ContentRight(props) {
             if (isLogin) {
               dispatch({
                 type: OPEN_MODAL_HOC,
-                title: "Thêm vào giõ hàng",
+                title: "Thêm vào giỏ hàng",
                 ComponentContentModal: (
                   <Cart productDetail={productDetail} user={user} />
                 ),

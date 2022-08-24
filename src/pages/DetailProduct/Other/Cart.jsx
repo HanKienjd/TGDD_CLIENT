@@ -15,7 +15,7 @@ const theme = createTheme({
 function Cart(props) {
   const { productDetail, user } = props;
   const [indexColor, setIndexColor] = useState(0);
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
   return (
     <ThemeProvider theme={theme}>
@@ -66,17 +66,19 @@ function Cart(props) {
           <div className="">
             <h1 className="font-semibold mb-2">Chọn số lượng: </h1>
             <div className="flex gap-2">
-              <Button
-                onClick={() => {
-                  if (quantity > 0) {
-                    setQuantity(quantity - 1);
-                  }
-                }}
-                variant="contained"
+                <Button
+                  onClick={() => {
+                    if (quantity > 0) {
+                      setQuantity(quantity - 1);
+                    }
+                  }}
+                  variant="contained"
                 size="small"
-              >
-                -
-              </Button>
+                disabled={quantity <= 1}
+                >
+                  -
+                </Button>
+
               <Button variant="outlined" size="small">
                 {quantity}
               </Button>

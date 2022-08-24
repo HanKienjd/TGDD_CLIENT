@@ -11,7 +11,7 @@ export class GlobalServices extends BaseService {
     formData.append("file", file);
     formData.append("upload_preset", "upload_file_tgdd");
     return axios.post(
-      "YOUR_API_IN_CLOUDINARY", // https://api.cloudinary.com/v1_1/CLOUNAME/.../...
+      "https://api.cloudinary.com/v1_1/hankiendev/image/upload",
       formData
     );
   };
