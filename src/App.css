@@ -60,3 +60,12 @@
 .swiper {
   height: 100% !important;
 }
+.object-cover {
+  width: 100%;
+}
+.text-yellow-500{
+  padding: 25px;
+  padding-left: 0;
+  
+}
+

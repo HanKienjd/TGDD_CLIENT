@@ -185,10 +185,10 @@ function Header(props) {
               <h3 className="font-semibold border-b-2">Phụ kiện di động</h3>
               <ul>
                 <Link to={"/accessory?type=backupCharger"}>
-                  <li className="p-2 hover:font-semibold">Sạc dự phòng</li>
+                  <li className="p-2 hover:font-semibold">Sạc cáp</li>
                 </Link>
                 <Link to={"/accessory?type=chargingCable"}>
-                  <li className="p-2 hover:font-semibold">Sạc cáp</li>
+                  <li className="p-2 hover:font-semibold">Sạc dự phòng</li>
                 </Link>
                 <Link to={"/accessory?type=appleAccessory"}>
                   <li className="p-2 hover:font-semibold">Phụ kiện apple</li>

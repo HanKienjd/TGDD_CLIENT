@@ -270,6 +270,7 @@ function ContentRight(props) {
     }
     return jsx;
   };
+
   return (
     <>
       {!_.isEmpty(productDetail) ? (

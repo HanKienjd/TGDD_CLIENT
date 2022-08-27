@@ -75,7 +75,7 @@ export default function FormEditPC(props) {
           values: {
             ...values,
             _id: product._id,
-            oldImgs: product?.images,
+            oldImgs: product.images,
           },
         });
       },

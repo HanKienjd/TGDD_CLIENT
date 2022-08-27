@@ -94,7 +94,11 @@ function App() {
       {loading && <Loading />}
       <Routes>
         {/* HomePage */}
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} >
+          <Route path=":id" element={<DetailProduct />} />
+          <Route path="" element={<MainPageLaptop/>} />
+        </Route>
+
         {/* Search */}
         <Route path="/search" element={<SearchPage />} />
 

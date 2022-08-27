@@ -1,10 +1,23 @@
 import { Checkbox, TextField } from "@mui/material";
+import { useEffect } from "react";
 import { memo, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 function Info(props) {
   const [gender, setGender] = useState("");
+  const { user }  = useSelector((state) => state.user);
   const { setFieldValue, errors, handleChange, touched } = props;
-	console.log("touched", touched);
+
+  useEffect(() => {
+    if (user) {
+      setGender(user?.gender);
+      setFieldValue("gender", user?.gender);
+      setFieldValue("name", user?.name);
+      setFieldValue("phone", user?.phone);
+      setFieldValue("address", user?.address);
+    }
+  }, []);
+
   return (
     <div className="py-4 ">
       <h1 className="text-center font-semibold text-base">
@@ -53,6 +66,7 @@ function Info(props) {
             id="filled-basic"
             label="Họ và tên"
             variant="filled"
+            defaultValue={user?.name}
           />
 
           <p className=" text-left text-red-600 text-sm">
@@ -67,6 +81,7 @@ function Info(props) {
             id="filled-basic"
             label="Số điện thoại"
             variant="filled"
+            defaultValue={user?.phone}
           />
           <p className=" text-left text-red-600 text-sm">
             {touched?.phone && errors?.phone ? errors?.phone : ""}
@@ -81,6 +96,7 @@ function Info(props) {
           id="filled-basic"
           label="Địa chỉ"
           variant="filled"
+          defaultValue={user?.address}
         />
         <p className=" text-left text-red-600 text-sm">
           {touched?.address && errors?.address ? errors?.address : ""}

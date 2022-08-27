@@ -15,17 +15,20 @@ import {
 import Info from "./Info";
 function ShoppingCartPage(props) {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.user);
+  const { user }  = useSelector((state) => state.user);
   const { shoppingCarts, loadingShoppingCart, quantityShoppingCart } =
     useSelector((state) => state.global);
+
   useEffect(() => {
     if (user._id) {
       dispatch({
         type: GET_CART_SAGA,
         idUser: user._id,
+        
       });
     }
   }, [dispatch, user._id]);
+ 
 
   const getTotalPrice = useMemo(() => {
     const result = shoppingCarts.reduce((res, curentPro, index) => {
@@ -33,7 +36,7 @@ function ShoppingCartPage(props) {
     }, 0);
     return result;
   }, [dispatch, quantityShoppingCart]);
-  const { handleSubmit, errors, touched, handleChange, setFieldValue } =
+  const { handleSubmit, errors, touched, handleChange, setFieldValue , formik} =
     useFormik({
       enableReinitialize: true,
       initialValues: {
@@ -52,7 +55,7 @@ function ShoppingCartPage(props) {
         address: Yup.string().required("Bạn không được bỏ trống"),
       }),
       onSubmit: (values) => {
-        console.log("values: ", values);
+        console.log("🚀 ~ file: ShoppingCartPage.jsx ~ line 58 ~ ShoppingCartPage ~ values", values)
         if (values.carts.length > 0) {
           dispatch({
             type: ADD_HISTORY_SAGA,
@@ -63,10 +66,6 @@ function ShoppingCartPage(props) {
         }
       },
     });
-
-	useEffect(() => {
-		console.log("user", user);
-	},[]);
 
   return (
     <div className="flex bg-[#eee] items-center justify-center p-4">

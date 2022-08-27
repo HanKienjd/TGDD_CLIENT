@@ -26,12 +26,12 @@ export default function CardCustom(props) {
             </span>
           </div>
           <p className="text-sm mt-2 h-[38px] text-struncate-card-ct">
-            🌺{product?.name}🌺
+            🌺{product.name}🌺
           </p>
 
           <div className="flex gap-2 mt-4">
             <div className="basis-1/2 text-center text-[12px] border-2 boder-gray-400 px-2">
-              {product?.category}
+              {product.category}
             </div>
             {product.brand && (
               <div className="basis-1/2 text-center text-[12px] border-2 boder-gray-400 px-2">

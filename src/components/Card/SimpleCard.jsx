@@ -12,6 +12,7 @@ import ContentSmartPhone from "../../pages/AdminPage/global/ContentModalDetailPr
 import ContentSwatch from "../../pages/AdminPage/global/ContentModalDetailProduct/ContentSwatch";
 import ContentTablet from "../../pages/AdminPage/global/ContentModalDetailProduct/ContentTablet";
 
+
 import { OPEN_MODAL_HOC } from "../../redux/reducers/types/mainType";
 
 function SimpleCard(props) {
