@@ -62,7 +62,7 @@ export default function Login() {
               alignItems: "center",
             }}
           >
-            <img className="h-[50px] w-[50px] object-cover" src={logo} alt="" />
+            {/* <img className="h-[50px] w-[50px] object-cover" src={logo} alt="" /> */}
 
             <Typography component="h1" variant="h5" sx={{ m: 0.5 }}>
               Đăng nhập
